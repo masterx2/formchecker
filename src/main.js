@@ -26,7 +26,7 @@ function checkForms () {
     forms.each(function (i, form) {
         $(form).addClass('highlight-form').submit(function (e) {
             console.log(e);
-            addMessage('Пойман сабмит формы #'+forms.indexOf(this));
+            addMessage('Пойман сабмит формы #'+forms.index(this));
             $(this).css('background', 'red');
         })
     })
