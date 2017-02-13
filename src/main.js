@@ -18,12 +18,16 @@ function addMessage(message, color) {
 
 function checkForms () {
     if (!forms.length) {
-        throw new Error('Forms not Found!');
+        throw new Error('Формы не найдены!');
     }
 
-    addMessage('Found '+ forms.length + ' form(s)');
+    addMessage('Нашлось '+ forms.length + ' форм(а)');
 
     forms.each(function (i, form) {
-        $(form).addClass('highlight-form');
+        $(form).addClass('highlight-form').submit(function (e) {
+            console.log(e);
+            addMessage('Пойман сабмит формы #'+forms.indexOf(this));
+            $(this).css('background', 'red');
+        })
     })
 }
