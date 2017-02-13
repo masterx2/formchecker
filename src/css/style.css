@@ -10,6 +10,8 @@
     font-size: 12px;
     border: 1px solid black;
     border-radius: 5px;
+    overflow-x: hidden;
+    overflow-y: scroll;
 }
 
 .checker-message {
