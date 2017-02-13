@@ -1,10 +1,27 @@
 import $ from 'jquery';
+require('./css/style.css');
 
 
-$('<div>').text('Testing!!!').css({
-    position: 'absolute',
-    fontSize: '50px',
-    color: 'red',
-    top: 0,
-    left: 0
-}).appendTo(document.body);
+const $display = $('<div>').addClass('checker-display').appendTo(document.body);
+const forms = $('form');
+
+
+try {
+    checkForms();
+} catch (e) {
+    addMessage(e.message, 'darkred');
+}
+
+function addMessage(message, color) {
+    $('<p>').addClass('checker-message').text(message).css('color', color).appendTo($display);
+}
+
+function checkForms () {
+    if (!forms.length) {
+        throw new Error('Forms not Found!');
+    }
+    
+    forms.each(function (form) {
+        console.log(form);
+    })
+}
