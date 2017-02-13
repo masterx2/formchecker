@@ -1,7 +1,6 @@
 const webpack = require("webpack");
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const root = __dirname + '/dist';
-const path = require('path');
 const src = __dirname + '/src';
 
 module.exports = {
@@ -19,12 +18,8 @@ module.exports = {
                 loader: 'babel-loader'
             },
             {
-                test: /\.hbs$/,
-                loader: "handlebars-loader"
-            },
-            {
                 test: /\.css$/,
-                loader: "style-loader"
+                loader: "style-loader!css-loader"
             }
         ]
     },
