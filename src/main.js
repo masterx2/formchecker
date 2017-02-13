@@ -25,9 +25,12 @@ function checkForms () {
 
     forms.each(function (i, form) {
         $(form).addClass('highlight-form').submit(function (e) {
-            console.log(e);
+            e.preventDefault();
+
             addMessage('Пойман сабмит формы #'+forms.index(this));
-            $(this).css('background', 'red');
+            $(this).css('background', 'red !important');
+
+            return false;
         })
     })
 }
