@@ -20,7 +20,9 @@ function checkForms () {
     if (!forms.length) {
         throw new Error('Forms not Found!');
     }
-    
+
+    addMessage('Found '+ forms.length + ' form(s)');
+
     forms.each(function (form) {
         console.log(form);
     })
