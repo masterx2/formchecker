@@ -23,7 +23,7 @@ function checkForms () {
 
     addMessage('Found '+ forms.length + ' form(s)');
 
-    forms.each(function (form) {
-        console.log(form);
+    forms.each(function (i, form) {
+        $(form).addClass('highlight-form');
     })
 }

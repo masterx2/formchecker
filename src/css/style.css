@@ -15,3 +15,8 @@
 .checker-message {
     margin: 2px 5px;
 }
+
+.highlight-form {
+    background: green !important;
+    padding: 10px !important;
+}
