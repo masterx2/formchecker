@@ -12,6 +12,7 @@
     border-radius: 5px;
     overflow-x: hidden;
     overflow-y: scroll;
+    z-index: 999999999;
 }
 
 .checker-message {
